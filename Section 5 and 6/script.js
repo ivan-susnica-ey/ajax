@@ -237,20 +237,20 @@
 //   });
 // };
 
-// Promise.race([askJohn(), askSusy(), askEugene()])
-// .then(value=>{
-//     console.log(value);
-// })
-// .catch(value=>{
-//     console.log(value)
-// })
+Promise.race([askJohn(), askSusy(), askEugene()])
+.then(value=>{
+    console.log(value);
+})
+.catch(value=>{
+    console.log(value)
+})
 
-// var askAtTheShop = () =>{
-//     return Promise.resolve('We always have pens. Buy one.')
-// }
+var askAtTheShop = () =>{
+    return Promise.resolve('We always have pens. Buy one.')
+}
 
-// Promise.race([askJohn(), askEugene(), askSusy(), askAtTheShop()])
-// .then(res=>console.log(res))
+Promise.race([askJohn(), askEugene(), askSusy(), askAtTheShop()])
+.then(res=>console.log(res))
 
 
 
